@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <script defer src="/static/js/alpine.min.js"></script>
+  <link href="/static/css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-base-200 text-base-content min-h-screen flex flex-col items-center justify-center">
+
+  <div x-data="{ count: 0 }" class="text-center">
+    <button @click="count++" class="btn btn-primary">
+      Clicked <span x-text="count"></span> times
+    </button>
+
+    <div class="mt-8 space-x-2">
+      <button class="btn btn-accent">Accent</button>
+      <button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-error">Error</button>
+    </div>
+  </div>
+
+</body>
+</html>
+
