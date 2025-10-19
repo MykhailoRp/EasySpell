@@ -1,0 +1,58 @@
+[project]
+name = "easyspell"
+version = "0.1.0"
+description = "A small app to learn foreign language pronunciation"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.3.0",
+    "fastapi>=0.119.0",
+    "uvicorn>=0.38.0",
+]
+
+[project.scripts]
+easy-spell = "easyspell.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+indent-width = 4
+line-length = 80
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.ruff.lint]
+select = [
+    "E", "W",  # Basic style & errors
+    "F",       # Pyflakes - undefined names, etc.
+    "B",       # Bugbear - best practices
+    "ANN",     # Type annotations
+    "A",       # Shadowing built-ins
+    "ASYNC",   # Async issues
+    "COM",     # Commas
+    "C4",      # Comprehensions
+    "DTZ",     # Datetime
+    "EM",      # Error messages
+    "EXE",     # Executable script
+    "INT",     # Print/logging
+    "ISC",     # Implicit string concat
+    "LOG",     # Logging practices
+    "N",       # Naming conventions
+    "PERF",    # Performance
+    "PIE",     # Idiomatic code
+    "Q",       # Quotes
+    "RET",     # Return consistency
+    "SIM",     # Simplifications
+    "TID",     # Tidiness
+    "ERA",     # Commented-out code
+    "TD",      # TODO formatting
+    "C90",     # Complexity
+    "FAST",    # Fastapi checks
+    "RUF",     # Ruff stuff
+]
+ignore = [
+    "COM812",
+]
