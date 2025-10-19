@@ -3,7 +3,13 @@ all: dev
 deps: daisyui alpine
 	uv sync
 
-dev:
+lint:
+	ruff check src
+
+typecheck:
+	pyright src
+
+dev: lint typecheck
 	parallel -j0 --lb ::: \
 		"$(MAKE) tailwind-watch" \
 		"easy-spell dev"
