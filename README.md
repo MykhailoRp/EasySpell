@@ -13,9 +13,9 @@ Create an app that would check the spelling of most laguages.
   - [ ] Bonus: streaming morphems
 - [ ] An api to support the app
   - [ ] Enviroment setup:
-    - [ ] Make files
-    - [ ] UV env
-    - [ ] Ruff + Pyright linter
+    - [x] Make files
+    - [x] UV env
+    - [x] Ruff + Pyright linter
     - [ ] Pre-commits
   - [ ] Postgre DataBase:
     - [ ] User table to record user data (Users)
