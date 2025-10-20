@@ -38,3 +38,6 @@ alpine:
 	curl -sL \
 		https://cdn.jsdelivr.net/npm/alpinejs@3.15.0/dist/cdn.min.js \
 		> ./static/js/alpine.min.js
+
+setup:
+	uv venv --clear && . .venv/bin/activate && uv sync && echo "Use 'source .venv/bin/activate' to activate venv"
