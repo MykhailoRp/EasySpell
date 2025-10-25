@@ -16,7 +16,7 @@ Create an app that would check the spelling of most laguages.
     - [x] Make files
     - [x] UV env
     - [x] Ruff + Pyright linter
-    - [ ] Pre-commits
+    - [x] Pre-commits
   - [ ] Postgre DataBase:
     - [ ] User table to record user data (Users)
     - [ ] Dictionary with words and their spelling (Words)
@@ -28,3 +28,20 @@ Create an app that would check the spelling of most laguages.
   - [ ] Word knowledge (show which words the user has seen, and their progress with them)
   - [ ] Bonus: leaderboard
   - [ ] Bonus: spelling tips
+
+
+## Dev setup
+
+Create a local **.venv** and install dependencies into it:
+
+    make setup
+
+## Dev run
+
+Run the compose normally:
+
+    docker compose up
+
+Run the compose with updated dependencies:
+
+    docker compose up --build

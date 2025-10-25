@@ -1,6 +1,5 @@
-all: dev
-
 deps: daisyui alpine
+	uv lock
 	uv sync
 
 lint:
@@ -8,11 +7,6 @@ lint:
 
 typecheck:
 	pyright src
-
-dev: lint typecheck
-	parallel -j0 --lb ::: \
-		"$(MAKE) tailwind-watch" \
-		"easy-spell dev"
 
 output.css:
 	tailwindcss \
@@ -38,3 +32,8 @@ alpine:
 	curl -sL \
 		https://cdn.jsdelivr.net/npm/alpinejs@3.15.0/dist/cdn.min.js \
 		> ./static/js/alpine.min.js
+
+setup:
+	uv venv --clear && . .venv/bin/activate && uv sync && uv run pre-commit install && echo "Use 'source .venv/bin/activate' to activate venv"
+
+pre-commit: deps lint typecheck
