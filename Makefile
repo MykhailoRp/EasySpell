@@ -1,6 +1,7 @@
 all: dev
 
 deps: daisyui alpine
+	uv lock
 	uv sync
 
 lint:
@@ -41,3 +42,5 @@ alpine:
 
 setup:
 	uv venv --clear && . .venv/bin/activate && uv sync && echo "Use 'source .venv/bin/activate' to activate venv"
+
+pre-commit: deps lint typecheck

@@ -10,6 +10,7 @@ dependencies = [
     "click>=8.3.0",
     "fastapi>=0.119.0",
     "jinja2>=3.1.6",
+    "pre-commit>=4.3.0",
     "pyright>=1.1.406",
     "pytailwindcss>=0.2.0",
     "ruff>=0.14.1",
