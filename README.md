@@ -16,7 +16,7 @@ Create an app that would check the spelling of most laguages.
     - [x] Make files
     - [x] UV env
     - [x] Ruff + Pyright linter
-    - [ ] Pre-commits
+    - [x] Pre-commits
   - [ ] Postgre DataBase:
     - [ ] User table to record user data (Users)
     - [ ] Dictionary with words and their spelling (Words)
