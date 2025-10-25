@@ -41,6 +41,6 @@ alpine:
 		> ./static/js/alpine.min.js
 
 setup:
-	uv venv --clear && . .venv/bin/activate && uv sync && echo "Use 'source .venv/bin/activate' to activate venv"
+	uv venv --clear && . .venv/bin/activate && uv sync && uv run pre-commit install && echo "Use 'source .venv/bin/activate' to activate venv"
 
 pre-commit: deps lint typecheck
