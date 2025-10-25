@@ -1,5 +1,3 @@
-all: dev
-
 deps: daisyui alpine
 	uv lock
 	uv sync
@@ -9,11 +7,6 @@ lint:
 
 typecheck:
 	pyright src
-
-dev: lint typecheck
-	parallel -j0 --lb ::: \
-		"$(MAKE) tailwind-watch" \
-		"easy-spell dev"
 
 output.css:
 	tailwindcss \
